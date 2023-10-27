@@ -6,7 +6,13 @@
          url("./Fonts/AmaticSC-Bold.woff") format("woff");
     font-weight: normal; 
     font-style: normal; /*can add bold/italics*/
-} /*multiple sources provide a backup font if the first one is not supported*/
+}
+@font-face {
+    font-family: "BebasNeue";
+    src: url("./Fonts/BebasNeue-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
 *{/*for everything*/
     box-sizing: border-box;
     font-family: Playfair;
@@ -34,28 +40,20 @@ html,body {/*gets rid of white margins*/
 .nav a:hover{ /* when hovering over elements, gives a background color*/
     background-color: rgba(240, 255, 255, .4); 
 }
-.underline
-{
-    position: absolute;
-    width: 100%;
-    border-bottom: 1px solid rgba(240, 255, 255, .7);
-    font-weight: lighter;
-    margin: 6% 0%
-}
-.main-header{
-    background-color: rgba(0, 0, 0, 0.6);
+/* .main-header{
     background-image: url("./images/snow-mountains-blue-sky-and-lake-nature-landscape-header.jpg");
-    background-blend-mode: multiply; /*blends background*/
-    background-size: cover; /*covers header space*/
-    padding-bottom: 40px; /*extends the header downward*/
-}
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-grow: 1;
+} */
 .name{
     text-align: center;
     margin: 0; /* flattens the space between words*/
-    font-size: 4em; /*em is the size of the font being used*/
-    font-family: "Amatic";
+    font-size: 4.9em; /*em is the size of the font being used*/
+    font-family: "BebasNeue";
     font-weight: normal; /*h1 tags bold on default so this just sets it to normal*/
-    color: white;
+    color: black;
 }
 .name-large{
     font-size: 8em;
@@ -69,11 +67,15 @@ html,body {/*gets rid of white margins*/
     margin: 0 auto;
 }
 .about{
-    font-family: Bodoni;
+    font-family: "Amatic";
     font-weight: normal;
     color: #5f9ea0;
+    text-align: center; 
+    font-size: 4em;
+
+}
+.summary{
     text-align: center;
-    font-size: 2.5em;
 }
 .portrait{
     float: left; /*text wraps around the right*/
@@ -99,32 +101,17 @@ html,body {/*gets rid of white margins*/
 .linkedin{
     padding: 0 10%;
 }   
-.LoginButton{
-    position: absolute;
-    color:#5f9ea0;
-    margin: 2.5% 84%;
-}
-.MoveRegisterSite{
-    position: absolute;
-    color:#5f9ea0;
-    margin: 2.5% 90%;
-}
-.loginEmail{
-    float: right;
-    clear: both;
-}
-.loginPassword{
-    float: right;
-    clear: both;
-}
-.loginInfo{
-    float: right;
-    clear: both;
-    margin: 2.3% 5%;
-    border: 0;
-}
 .personalInfo{
     color: #C0C0C0;
     font-size: 1.3em;
     margin: 0 0%;
+}
+.parallax 
+{
+        background-image: url("./images/How-To-Blur-Background-On-iPhone.webp");
+        min-height: 900px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
 }

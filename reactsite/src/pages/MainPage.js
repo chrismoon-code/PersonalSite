@@ -3,14 +3,10 @@ import {useEffect, useState} from "react";
 export default function MainPage()
 {
     const [color]=useState('darkslateblue');
-    const [Textcolor]=useState('lightsteelblue');
+    const [Textcolor]=useState('lightsteelblue');   
     const [users,setUsers] = useState('');
 useEffect(() => {
 })
-async function loginCheck()
-{
-
-}
 return (
     <div className="App">
     <head>
@@ -18,31 +14,19 @@ return (
     </head>
     <body> 
     <header class ="main-header">
+    <div class="parallax">
     <h1 class = "name name-large"> 
     Christopher Moon 
-    </h1>
-    <fieldset className = "loginInfo"> 
-    <input className="loginEmail"  type="text" id="username" placeholder="Email"/>
-    <input className="loginPassword" type="text" id="password" placeholder="Password"/>
-    </fieldset>
-    <div className = "personalInfo">
-        Personal Contact:&#160;647 636 3712 
-        <br/> My Email:&#160;christopher.moon2008@gmail.com
+    </h1>  
     </div>
-    <div class = "LoginButton">
-    <button onClick ={() => loginCheck()} style = {{background: color, color: Textcolor}}> 
-    Login 
-    </button>
-    </div>
-    <div class = "MoveRegisterSite">
-    <a href = "/RegisterPage">
-    <button style = {{background: color, color: Textcolor}}> Register </button>
-    </a>
-    </div>
-    <div className = "underline">
-    </div>   
+    <p className = "about"> About: </p> <br/>
+    <p1 className = "summary">
+    I am a graduate of Software Engineering with Honours at York University.
+    </p1> 
     </header>
-<section class = "personal-summary container">
+    </body>
+    </div>
+/* <section class = "personal-summary container"> 
     <h5 class = "about"> ABOUT </h5>
     <img class = "portrait" src = {require("../styles/images/me.jpg")}>
     </img>
@@ -69,6 +53,8 @@ return (
     </div>
 </footer>
 </body>
-</div>
+</div> */
+
 );
+
 }
